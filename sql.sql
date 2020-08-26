@@ -1,0 +1,1 @@
+CREATE DATABASE campanhas WITH OWNER = postgres
