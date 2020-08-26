@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "a8b6c7d1-4186-426a-960f-604451d9ef78",
+		"name": "Teste MAGALU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar cliente API",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3dfe86c1-b36e-4733-9a9e-ff65a36a9c99",
+						"exec": [
+							"var data = new Date(2019, 5, 5).getTime();\r",
+							"pm.globals.set(\"data\", data);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"josé\",\r\n    \"email\": \"jose@jose.com\",\r\n    \"nascimento\": {{data}},\r\n    \"time\": 1\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Campanha API",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "52c9d179-c609-4a64-b9b0-b29ff67f380d",
+						"exec": [
+							"var inicio = new Date(2020,0,1).getTime();\r",
+							"var fim = new Date(2021, 0, 16).getTime();\r",
+							"pm.globals.set(\"inicio\", inicio)\r",
+							"pm.globals.set(\"fim\", fim)\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"campanha do especial do torcedor do cruzeiro de 2021 atualizada\",\r\n    \"time\": 1,\r\n    \"inicio\": {{inicio}},\r\n    \"fim\": {{fim}}\r\n}\r\n"
+				},
+				"url": {
+					"raw": "localhost:8080/api/campanha",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"campanha"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca todas as campanhas API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/campanhas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"campanhas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apagar campanha API",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/campanha/13",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"campanha",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retorna todos os clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
