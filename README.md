@@ -21,6 +21,7 @@ h3>
   <li> <b> clientes: </b> Contem os fontes da API clientes </li>
   <li> <b> sql.sql: </b> Contem os comandos para criar a base de dados </li>
   <li> <b> requisicoes-postman.json: </b> Arquivo que pode ser importado no postman com diversas requisições para teste das APIs </li>
+  <li> <b> testes gerais.pdf </b> documento com testes que foram feitos durante o desenvolvimento </p>
 </ul>
 
 <h3> Instruções para uso </h3>
