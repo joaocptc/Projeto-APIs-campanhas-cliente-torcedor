@@ -12,8 +12,6 @@ São usadas as seguintes tecnologias, Java, Spring boot, JPA e PostgreSQL. </p>
 <p align="justify">
   Linguagem JAVA, Spring boot, JPA, Base de Dados PostgreSQL versão 10 
 </p
->
-h3>
 
 <h3> Arquivos </h3>
 <ul>
